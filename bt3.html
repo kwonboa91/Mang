@@ -1,38 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Faking Textarea on Typing</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script>
-        var a = new Array(), n = "";
-        a[1] = 'T'; a[2] = 'Ô'; a[3] = 'I'; a[4] = ' '; a[5] = 'L'; a[6] = 'À'; a[7] = ' '; a[8] = 'S'; a[9] = 'U'; a[10] = 'P'; a[11] = 'E'; a[12] = 'R'; a[13] = ' '; a[14] = 'M'; a[15] = 'A'; a[16] = 'N'; a[17] = '!'; a[18] = '!'; a[19] = '!';
-        function typeTextarea() {
-            t = document.f.txt.value;
-            j = t.length;
-            if (j > 0) {
-                for (var i = 1; i <= j; i++) {
-                    n = n + a[i];
-                    if (i == 19) {
-                        document.f.txt.value = "";
-                        n = "";
-                    }
-                }
-            }
-            document.f.txt.value = n;
-            n = "";
-            setTimeout("typeTextarea()", 1);
-
-        }
-    </script>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
 </head>
 
 <body>
-    <center>
-        <h2>Type anthing slowly</h2>
-        <form name="f">
-            <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
-        </form>
-    </center>
+    <form action="" name="f">
+        <textarea name="textare" id="textare" cols="30" rows="10" onkeydown="setTextArea()"></textarea>
+    </form>
+    <script>
+        let chuoi = "I am Iron Man"
+        let cuphap = ""
+        function setTextArea() {
+            let area = document.f.textare.value;
+            let dodai = area.length
+
+            if (dodai > 0) {
+                for (let i = 1; i <= dodai; i++) {
+                    cuphap += chuoi[i - 1]
+                    console.log(chuoi[i - 1])
+                    if (i == 14) {
+                        cuphap = ""
+                        document.f.textare.value = ""
+                    }
+                }
+                document.f.textare.value = cuphap
+                cuphap = ""
+                let stime = setTimeout("setTextArea()", 1)
+
+            }
+        }
+
+    </script>
 </body>
 
 </html>
