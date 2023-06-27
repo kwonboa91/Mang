@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // bt1
+
+        function tinhtong(a, b) {
+            if (a > b) {
+                return "Giá trị a > b "
+            }
+            return a + b
+        }
+        function bt1() {
+            let a = Number(prompt("Nhập số a"))
+            let b = Number(prompt("Nhập số b"))
+            document.write("Tổng của " + a + " + " + b + " = " + tinhtong(a, b))
+        }
+        bt1()
+
+        // bt2
+
+        // function ngoiSao(sao) {
+        //     let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        //     let sao2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        //     for (let i = 0; i < sao1.length; i++) {
+        //         if (sao == sao1[i]) {
+        //             return sao2[i]
+        //         }
+        //     }
+        //     return ""
+        // }
+        // function bt2() {
+        //     let timsao = prompt("Nhập tên ngôi sao")
+        //     let sao = ngoiSao(timsao)
+        //     if (sao == "") {
+        //         document.write("Không có tên ngôi sao nào")
+        //     } else {
+        //         document.write("Tên ngôi sao tương ứng của " + timsao + " là " + sao)
+        //     }
+        // }
+        // bt2()
+
+        // bt3
+
+        // function binhphuong(so) {
+        //     let ketqua = so * so
+        //     return ketqua
+        // }
+        // function bt3() {
+        //     let so = Number(prompt("Nhập một số tính bình phương"))
+        //     let ketqua = binhphuong(so)
+        //     document.write("Bình phương của " + so + " = " + ketqua)
+        // }
+        // bt3()
+
+        // bt4:
+
+        // function dienTich(r, pi) {
+        //     let S = r * r * pi
+        //     return S
+        // }
+        // function chuVi(r, pi) {
+        //     let C = 2 * r * pi
+        //     return C
+        // }
+        // function bt4() {
+        //     const pi = 3.14
+        //     let r = Number(prompt("Nhập bán kính hình tròn "))
+        //     let chuvi = chuVi(r, pi)
+        //     let dientich = dienTich(r, pi)
+        //     document.write("Chu vi hình tròn là " + chuvi + "<br>")
+        //     document.write("Diện tích hình tròn là " + dientich)
+        // }
+        // bt4()
+
+
+        // bt5
+
+        // function giaiThua(so) {
+        //     let giai_thua = 1;
+        //     if (so >= 1) {
+        //         for (let i = 1; i <= so; i++) {
+        //             giai_thua = giai_thua * i
+        //         }
+        //     } else if (so == 0) {
+        //         giai_thua = 1
+        //     } else {
+        //         return "Giai thừa không xác định được"
+        //     }
+        //     return giai_thua
+        // }
+        // function bt5() {
+        //     let so = Number(prompt("Nhập vào một số tính giai thừa"))
+        //     let gt = giaiThua(so)
+        //     document.write("Giai thừa của " + so + " = " + gt)
+        // }
+        // bt5()
+
+        // bt6
+
+        // function kiemTraSoHayChuoi(i) {
+        //     if (i % 2 == 0 || i % 2 == 1) {
+        //         return true
+        //     }
+        //     return false
+        // }
+        // function bt6() {
+        //     let i = prompt("Nhập vào ")
+        //     let check = kiemTraSoHayChuoi(i)
+        //     if (check) {
+        //         alert("Đây là số")
+        //     } else {
+        //         alert("Đây là chuỗi")
+        //     }
+        // }
+        // bt6()
+
+        // bt7
+
+        // function timMin(mang_so) {
+        //     let backup
+        //     for (let i = 0; i < mang_so.length; i++) {
+        //         backup = mang_so[0]
+        //         if (mang_so[i] < backup) {
+        //             backup = mang_so[i]
+        //         }
+        //     }
+        //     return backup
+        // }
+        // function bt7() {
+        //     let mang_so = []
+        //     for (let i = 0; i < 3; i++) {
+        //         mang_so.push(Number(prompt("Nhập vào mảng số thứ " + i)))
+        //     }
+        //     let min = timMin(mang_so)
+        //     document.write("Mảng số gồm [" + mang_so + "] <br>")
+        //     document.write("Số nhỏ nhất trong dãy là " + min)
+        // }
+        // bt7()
+
+        // bt8
+
+        // function bt8() {
+        //     let kytu = prompt("Nhập vào số ")
+        //     let check = kiemtraKyTuNguyenAm(kytu)
+        //     if (check == true) {
+        //         alert(kytu + " Đây là số nguyên âm")
+        //     } else {
+        //         alert(kytu + " Không phải số nguyên âm")
+        //     }
+
+        // }
+        // function kiemtraKyTuNguyenAm(kytu) {
+        //     if (/[]/.test(kytu)) {
+        //         return true
+        //     }
+        //     return false
+        // }
+        // bt8()
+
+        // bt9
+
+        // function bt9() {
+        //     let mangso = [4, 1, 6, 8, 2, 7, 0]
+        //     document.write("Mảng số gồm mang[" + mangso + "]<br>")
+        //     let daoMang = daoMangSo(mangso)
+        //     document.write("Đổi chỗ mảng số mangdoi[" + daoMang + "]")
+        // }
+        // function daoMangSo(mangso) {
+        //     return mangso.reverse()
+        // }
+        // bt9()
+
+        // bt10
+
+        // function bt10() {
+        //     let mang = ['a', 'b', 'c', 'c', 'd', 'd', 'd', 'e', 'd', 'f']
+        //     let kytu = prompt("Nhập vào 1 ký tự bất kỳ")
+        //     document.write("Mảng gồm [" + mang + "]<br>")
+        //     let kiemtra = kiemTraTrongMang(kytu, mang)
+        //     if (kiemtra > 0) {
+        //         document.write("Có " + kiemtra + " ký tự " + kytu + " trong mảng")
+        //     } else {
+        //         document.write("Không có dữ liệu trong mảng")
+        //     }
+        // }
+        // function kiemTraTrongMang(kytu, mang) {
+        //     let dem = 0
+        //     for (let i = 0; i < mang.length; i++) {
+        //         if (kytu == mang[i]) {
+        //             dem++
+        //         }
+        //     }
+        //     if (dem > 0) {
+        //         return dem
+        //     }
+        //     return -1
+        // }
+        // bt10()
+
+
+    </script>
+</body>
+
+</html>
